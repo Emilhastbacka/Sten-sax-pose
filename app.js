@@ -5,7 +5,7 @@ const paperBtn = document.getElementById("paper");
 const resultDiv = document.getElementById("result");
 
 
-const choices = ["rock", "scissors", "paper"];
+const choices = ["sten", "sax", "påse"];
 
 
 function getComputerChoice() {
@@ -18,9 +18,9 @@ function determineWinner(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         return "Oavgjort!";
     } else if (
-        (userChoice === "rock" && computerChoice === "scissors") ||
-        (userChoice === "scissors" && computerChoice === "paper") ||
-        (userChoice === "paper" && computerChoice === "rock")
+        (userChoice === "sten" && computerChoice === "sax") ||
+        (userChoice === "sax" && computerChoice === "påse") ||
+        (userChoice === "påse" && computerChoice === "sten")
     ) {
         return "Du vinner!";
     } else {
@@ -39,13 +39,13 @@ function handleUserChoice(userChoice) {
 }
 
 rockBtn.addEventListener("click", function () {
-    handleUserChoice("rock");
+    handleUserChoice("sten");
 });
 
 scissorsBtn.addEventListener("click", function () {
-    handleUserChoice("scissors");
+    handleUserChoice("sax");
 });
 
 paperBtn.addEventListener("click", function () {
-    handleUserChoice("paper");
+    handleUserChoice("påse");
 });
